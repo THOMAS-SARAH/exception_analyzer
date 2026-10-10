@@ -1,0 +1,8 @@
+[2026-10-10 00:15:22] [ERROR] [com.internal.services.OrderService] - Failed to complete order checkout process.
+java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30005ms.
+    at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:213)
+    at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+    at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+    at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+[2026-10-10 00:15:23] [FATAL] [com.internal.gateway.ApiGateway] - CircuitBreaker 'OrderService' tripped to OPEN state due to high failure rate (85% error rate across last 500 requests).
+[2026-10-10 00:15:25] [WARN] [com.internal.telemetry.AlertManager] - High Memory Utilization: Host DB-Primary-01 memory pressure exceeded 94%. Active thread pool exhausted.
